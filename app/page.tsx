@@ -24,7 +24,7 @@ export default function HomePage() {
             倉敷市日ノ出町のプライベート鍼灸サロン「りあん鍼灸院」
           </p>
           <a 
-            href="lin.ee/oNgp7Y2R" 
+            href="https://lin.ee/oNgp7Y2R" 
             className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-800 transition shadow-lg"
              >
             まずはご相談ください
