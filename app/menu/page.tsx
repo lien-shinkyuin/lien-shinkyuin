@@ -24,7 +24,7 @@ export default function MenuPage() {
       time: '約50分', 
       price: '¥5,500', 
       desc: 'お顔の血行を促進し、内側から輝くハリのある肌へ。',
-      img: '/hero3.jpg'
+      img: '/hero3.png'
     },
     { 
       name: '初めての方限定（平日限定）全身リセットコース', 
