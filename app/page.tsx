@@ -17,13 +17,16 @@ export default function HomePage() {
           className="object-cover"
         />
         <div className="relative z-20 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-stone-800 mb-6 tracking-wider">
+          <h1 className="text-4xl md:text-6xl font-bold text-emerald-900 mb-6 tracking-wider">
             心と体を整える、<br />あなたのための癒やし空間。
           </h1>
-          <p className="text-lg md:text-xl text-stone-700 mb-10">
+          <p className="text-lg md:text-xl text-emerald-900 mb-10">
             倉敷市日ノ出町のプライベート鍼灸サロン「りあん鍼灸院」
           </p>
-          <a href="/access" className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-800 transition shadow-lg">
+          <a 
+            href="lin.ee/oNgp7Y2R" 
+            className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-800 transition shadow-lg"
+             >
             まずはご相談ください
           </a>
         </div>
