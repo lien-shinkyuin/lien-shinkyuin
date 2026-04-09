@@ -22,7 +22,7 @@ export default function RootLayout({
             <li className="hover:text-emerald-600 cursor-pointer">
             <a href="/menu" className="block w-full h-full">メニュー・料金</a></li>
             <li className="hover:text-emerald-600 cursor-pointer">院内紹介</li>
-            <li className="hover:text-emerald-600 cursor-pointer">アクセス</li>
+            <li className="hover:text-emerald-600 cursor-pointer"><a href="/access">アクセス</a></li>
           </ul>
           <button className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition">
             ご予約はこちら
