@@ -16,7 +16,6 @@ export default function AccessPage() {
             <p className="text-stone-700 leading-relaxed">
               〒710-0063<br />
               岡山県倉敷市日ノ出町1丁目5-15<br />
-              （※実際の住所に書き換えてください）
             </p>
           </div>
 
