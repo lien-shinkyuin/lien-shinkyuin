@@ -10,7 +10,7 @@ export default function HomePage() {
         {/* メイン写真 */}
         <Image
           src="/hero.jpg"  // 画像のファイル名に合わせてください (.pngなら.pngに)
-          alt="リアン鍼灸院の院内風景"
+          alt="りあん鍼灸院の院内風景"
           fill
           priority
           unoptimized //
