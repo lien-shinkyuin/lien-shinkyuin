@@ -2,8 +2,12 @@ import './globals.css'
 import React from 'react'
 
 export const metadata = {
-  title: 'りあん鍼灸院 | 倉敷市日ノ出町のプライベートサロン',
-  description: '心と体を整える、あなたのための癒やし空間。岡山県倉敷市日ノ出町の完全個室鍼灸院です。',
+  title: '倉敷の鍼灸なら「りあん鍼灸院」| 女性に優しい完全個室のプライベートサロン',
+  description: '岡山県倉敷市日ノ出町の鍼灸院です。肩こり・腰痛・自律神経の乱れなど、一人ひとりに合わせたオーダーメイドの施術を提供。LINEで24時間予約受付中。',
+  // ↓ここにコピーした「content」の中の英数字だけを貼り付けます
+  verification: {
+    google: '<meta name="google-site-verification" content="ysi9xXGz8PkLOoOqBim83nRukChNe1IyWnYcstk_L4E" />',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
