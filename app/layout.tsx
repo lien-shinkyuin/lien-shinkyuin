@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // 先ほどのtolの予約リンクをここにまとめました
-  const reservationUrl = "https://tol-app.jp/s/wdlobvps1skfp054i299";
+  const reservationUrl = "https://lin.ee/oNgp7Y2R";
 
   return (
     <html lang="ja">
@@ -66,4 +66,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         {/* スマホ固定バー（予約システムに直結） */}
-        <div className="md:hidden sticky bottom-0 left-0 right-0 p-4 bg-white
+        <div className="md:hidden sticky bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-stone-100 z-50">
+          {/* スマホ固定バーのテキスト修正例 */}
+          <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="...">
+           LINEで予約・相談する
+          </a>
+        </div>
+      </body>
+    </html>
+  )
+}
