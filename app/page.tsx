@@ -13,6 +13,7 @@ export default function HomePage() {
           alt="リアン鍼灸院の院内風景"
           fill
           priority
+          unoptimized //
           className="object-cover"
         />
         <div className="relative z-20 text-center px-4">
@@ -59,9 +60,10 @@ export default function HomePage() {
           <div className="w-full md:w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-stone-200">
             <Image
               src="/profile.jpg" // 画像のファイル名に合わせてください
-              alt="院長の〇〇先生"
-              width={600}
-              height={800}
+              alt="院長の生駒先生"
+              width={800}
+              height={1000}
+              unoptimized //
               className="w-full h-full object-cover"
             />
           </div>
