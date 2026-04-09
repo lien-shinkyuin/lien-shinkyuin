@@ -1,6 +1,6 @@
+"use client"; // ←必ず1行目に配置してください
 import React from 'react';
 import Image from 'next/image';
-"use client"; // アニメーションを使うために必要です
 import { motion } from "framer-motion";
 
 export default function HomePage() {
@@ -11,31 +11,33 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/10 z-10"></div>
         {/* メイン写真 */}
         <Image
-          src="/hero.jpg"  // 画像のファイル名に合わせてください (.pngなら.pngに)
-          alt="岡山県倉敷市日ノ出町のりあん鍼灸院。女性専用・完全個室のプライベート空間で、国家資格保持者が一人ひとりに合わせた丁寧な施術を行います。。"
+          src="/hero.jpg"
+          alt="岡山県倉敷市日ノ出町のりあん鍼灸院。女性専用・完全個室のプライベート空間で、国家資格保持者が一人ひとりに合わせた丁寧な施術を行います。"
           fill
           priority
-          unoptimized //
+          unoptimized
           className="object-cover"
-          
         />
         
-         <motion.div 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.0, ease: "easeOut" }} // 少しゆったり動かします
           className="relative z-20 text-center px-4"
->
-         <h1 className="...">
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-emerald-900 mb-6 tracking-wider drop-shadow-[0_2px_2px_rgba(255,255,255,0.7)]">
             心と体を整える、<br />あなたのための癒やし空間。
-         </h1>
-          <p className="...">
+          </h1>
+          <p className="text-lg md:text-xl text-emerald-900 mb-10 drop-shadow-[0_2px_2px_rgba(255,255,255,0.7)]">
             倉敷市日ノ出町のプライベート鍼灸サロン「りあん鍼灸院」
           </p>
-          <a href="...">
+          <a 
+            href="https://lin.ee/oNgp7Y2R"
+            className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-800 transition shadow-lg"
+          >
             まずはご相談ください
-              </a>
-           </motion.div> 
+          </a>
+        </motion.div> 
       </section>
 
       {/* 当院の3つの特長 */}
@@ -45,12 +47,12 @@ export default function HomePage() {
             当院が選ばれる理由
           </h2>
           <motion.div 
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.6 }}
-           className="grid md:grid-cols-3 gap-12"
->           
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-3 gap-12"
+          >           
             {[
               { title: "完全個室のプライベート空間", desc: "周りを気にせず、リラックスして施術を受けられます。" },
               { title: "一人ひとりに合わせたオーダーメイド", desc: "お悩みをお聞きし、最適な施術プランを提案します。" },
@@ -74,11 +76,11 @@ export default function HomePage() {
           {/* 先生（プロフィール）写真 */}
           <div className="w-full md:w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-stone-200">
             <Image
-              src="/profile.jpg" // 画像のファイル名に合わせてください
+              src="/profile.jpg"
               alt="院長の生駒先生"
               width={800}
               height={1000}
-              unoptimized //
+              unoptimized
               className="w-full h-full object-cover"
             />
           </div>
