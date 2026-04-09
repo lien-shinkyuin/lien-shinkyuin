@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -6,13 +7,20 @@ export default function HomePage() {
       {/* メインビジュアル（ヒーローセクション） */}
       <section className="relative h-[80vh] flex items-center justify-center bg-stone-100">
         <div className="absolute inset-0 bg-black/10 z-10"></div>
-        {/* 本来はここに院内の素敵な写真を入れます */}
+        {/* メイン写真 */}
+        <Image
+          src="/hero.jpg"  // 画像のファイル名に合わせてください (.pngなら.pngに)
+          alt="リアン鍼灸院の院内風景"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="relative z-20 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold text-stone-800 mb-6 tracking-wider">
             心と体を整える、<br />あなたのための癒やし空間。
           </h1>
           <p className="text-lg md:text-xl text-stone-700 mb-10">
-            倉敷市日ノ出町のプライベート鍼灸サロン「リアン鍼灸院」
+            倉敷市日ノ出町のプライベート鍼灸サロン「りあん鍼灸院」
           </p>
           <a href="/access" className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-800 transition shadow-lg">
             まずはご相談ください
@@ -47,8 +55,15 @@ export default function HomePage() {
       {/* メッセージセクション */}
       <section className="py-20 px-6 bg-emerald-50">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2 aspect-[3/4] bg-stone-200 rounded-2xl shadow-inner flex items-center justify-center text-stone-400">
-            ここに先生の写真を<br />入れたいですね！
+          {/* 先生（プロフィール）写真 */}
+          <div className="w-full md:w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-stone-200">
+            <Image
+              src="/profile.jpg" // 画像のファイル名に合わせてください
+              alt="院長の〇〇先生"
+              width={600}
+              height={800}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl font-bold text-stone-800 mb-6">「つながり」を大切にする鍼灸院</h2>
