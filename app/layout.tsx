@@ -2,7 +2,7 @@ import './globals.css'
 import React from 'react'
 
 export const metadata = {
-  title: 'リアン鍼灸院',
+  title: 'りあん鍼灸院',
   description: '心と体を整える、あなたのための癒やし空間。',
 }
 
@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className="bg-stone-50 text-stone-800">
         {/* 全ページ共通のナビゲーションメニュー */}
         <nav className="flex items-center justify-between px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
-          <a href="/" className="text-2xl font-bold text-emerald-700">リアン鍼灸院</a>
+         <a href="/" className="text-2xl font-semibold text-emerald-800">りあん鍼灸院</a>
           <ul className="flex gap-8 font-medium">
             <li className="hover:text-emerald-600 cursor-pointer"><a href="/">ホーム</a></li>
             <li className="hover:text-emerald-600 cursor-pointer">
@@ -34,7 +34,7 @@ export default function RootLayout({
 
         {/* 共通のフッター（足跡） */}
         <footer className="bg-stone-100 py-10 text-center text-stone-500 text-sm">
-          © 2026 リアン鍼灸院. All rights reserved.
+          © 2026 りあん鍼灸院. All rights reserved.
         </footer>
       </body>
     </html>
