@@ -30,7 +30,7 @@ export default function AccessPage() {
             <h2 className="text-lg font-bold text-emerald-700 mb-2 border-b border-emerald-100 pb-2">診療時間</h2>
             <div className="text-sm text-stone-700 space-y-1">
               <p className="flex justify-between text-base"><span>平日：</span><span>9:00 〜 19:00</span></p>
-              <p className="flex justify-between text-base border-b border-stone-100 pb-1"><span>土曜：</span><span>9:00 〜 13:00</span></p>
+              <p className="flex justify-between text-base border-b border-stone-100 pb-1"><span>土日：</span><span>9:00 〜 19:00</span></p>
               <p className="text-stone-500 pt-1">休診日：第3・日曜日　月曜日</p>
             </div>
           </div>
