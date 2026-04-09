@@ -17,7 +17,7 @@ export default function HomePage() {
           className="object-cover"
         />
         <div className="relative z-20 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-emerald-900 mb-6 tracking-wider">
+          <h1 className="text-4xl md:text-6xl font-bold text-emerald-900 mb-6 tracking-wider drop-shadow-[0_2px_2px_rgba(255,255,255,0.7)]">
             心と体を整える、<br />あなたのための癒やし空間。
           </h1>
           <p className="text-lg md:text-xl text-emerald-900 mb-10">
