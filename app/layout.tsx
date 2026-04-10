@@ -1,7 +1,6 @@
 import './globals.css'
 import React from 'react'
 import MobileNavbar from '../components/MobileNavbar';
-import { Instagram } from 'lucide-react';
 
 export const metadata = {
   title: '倉敷の鍼灸なら「りあん鍼灸院」| 女性に優しい完全個室のプライベートサロン',
@@ -29,36 +28,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </ul>
 
             <div className="flex items-center gap-4">
-              {/* アイコンの書き方を一番安全なものに変えました */}
               <a 
                 href={instagramUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-stone-600 dark:text-stone-300 hover:text-[#E1306C] dark:hover:text-pink-400 transition-colors flex items-center justify-center"
+                className="hover:scale-110 transition-transform text-2xl"
+                aria-label="Instagram"
               >
-                <Instagram size="22px" />
+                📸
               </a>
-
               <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-md text-sm font-medium">
-                ご予約はこちら
+                ご予約
               </a>
             </div>
           </div>
         </nav>
 
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
 
         <footer className="bg-stone-800 dark:bg-black text-stone-200 py-16 px-6 border-t border-stone-700">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">りあん鍼灸院</h2>
-              <p className="text-sm leading-relaxed text-stone-400">
-                一人ひとりの「絆」を大切に。<br />
-                心と体の調和をお手伝いする、<br />
-                倉敷のプライベートサロンです。
-              </p>
+              <p className="text-sm text-stone-400">一人ひとりの「絆」を大切に。倉敷のプライベートサロンです。</p>
             </div>
             <div>
               <h3 className="font-bold text-white mb-4">コンテンツ</h3>
@@ -69,19 +61,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-white mb-4">所在地・連絡先</h3>
-              <p className="text-sm text-stone-400">
-                〒710-0063<br />
-                岡山県倉敷市日ノ出町1丁目5-15<br />
-                TEL: 090-7122-7638
-              </p>
+              <h3 className="font-bold text-white mb-4">所在地</h3>
+              <p className="text-sm text-stone-400">岡山県倉敷市日ノ出町1丁目5-15<br />TEL: 090-7122-7638</p>
             </div>
           </div>
-          <div className="max-w-6xl mx-auto border-t border-stone-700 mt-12 pt-8 text-center text-xs text-stone-500">
-            © 2026 りあん鍼灸院. All rights reserved.
-          </div>
         </footer>
-
         <MobileNavbar />
       </body>
     </html>
