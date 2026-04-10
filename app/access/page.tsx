@@ -5,7 +5,7 @@ export default function AccessPage() {
     <main className="max-w-4xl mx-auto py-10 md:py-20 px-4 md:px-6">
       <div className="text-center mb-10 md:mb-16">
         <h1 className="text-2xl md:text-3xl font-bold text-stone-800 mb-3">アクセス</h1>
-        <p className="text-sm md:text-base text-stone-500">リアン鍼灸院への行き方をご案内します。</p>
+        <p className="text-sm md:text-base text-stone-500">りあん鍼灸院への行き方をご案内します。</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-10 items-start">
