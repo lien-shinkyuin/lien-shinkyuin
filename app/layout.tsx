@@ -28,21 +28,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </ul>
 
             <div className="flex items-center gap-4">
-              {/* --- ここから修正：📸 を インスタロゴ（SVG）に変更 --- */}
+              {/* Instagramロゴ：色をピンクに固定し、ホバーで少し大きく */}
               <a 
                 href={instagramUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-stone-600 dark:text-stone-300 hover:text-[#E1306C] dark:hover:text-pink-400 transition-colors duration-300 flex items-center"
+                className="hover:scale-110 transition-transform duration-300 flex items-center"
                 aria-label="Instagram"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#E1306C" 
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -52,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
               </a>
-              {/* --- ここまで修正 --- */}
 
               <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-md text-sm font-medium">
                 ご予約
@@ -81,6 +80,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <h3 className="font-bold text-white mb-4">所在地</h3>
               <p className="text-sm text-stone-400">岡山県倉敷市日ノ出町1丁目5-15<br />TEL: 090-7122-7638</p>
             </div>
+          </div>
+          <div className="max-w-6xl mx-auto border-t border-stone-700 mt-12 pt-8 text-center text-xs text-stone-500">
+            © 2026 りあん鍼灸院. All rights reserved.
           </div>
         </footer>
         <MobileNavbar />
