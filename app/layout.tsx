@@ -1,6 +1,7 @@
 import './globals.css'
 import React from 'react'
 import MobileNavbar from '../components/MobileNavbar';
+import { Instagram } from 'lucide-react';
 
 export const metadata = {
   title: '倉敷の鍼灸なら「りあん鍼灸院」| 女性に優しい完全個室のプライベートサロン',
@@ -12,30 +13,44 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const reservationUrl = "https://lin.ee/oNgp7Y2R";
+  const instagramUrl = "https://www.instagram.com/lien_shinkyuin?igsh=MTI3M2llMHZkZ2czMw==";
 
   return (
     <html lang="ja">
-      <body className="bg-stone-50 text-stone-800 flex flex-col min-h-screen pb-20 md:pb-0">
-        {/* ナビゲーション（PC用） */}
-        <nav className="flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-          <a href="/" className="text-xl md:text-2xl font-bold text-emerald-800 tracking-tight">りあん鍼灸院</a>
-          <ul className="hidden md:flex gap-8 font-medium text-stone-600">
-            <li><a href="/" className="hover:text-emerald-700 transition">ホーム</a></li>
-            <li><a href="/menu" className="hover:text-emerald-700 transition">メニュー</a></li>
-            <li><a href="/access" className="hover:text-emerald-700 transition">アクセス</a></li>
-          </ul>
-          <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-md text-sm font-medium">
-            ご予約はこちら
-          </a>
+      <body className="bg-stone-50 text-stone-800 dark:bg-stone-900 dark:text-stone-100 flex flex-col min-h-screen pb-20 md:pb-0">
+        <nav className="flex items-center justify-between px-6 py-4 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-transparent dark:border-stone-800">
+          <a href="/" className="text-xl md:text-2xl font-bold text-emerald-800 dark:text-emerald-500 tracking-tight">りあん鍼灸院</a>
+          
+          <div className="flex items-center gap-6">
+            <ul className="hidden md:flex gap-8 font-medium text-stone-600 dark:text-stone-300">
+              <li><a href="/" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition">ホーム</a></li>
+              <li><a href="/menu" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition">メニュー</a></li>
+              <li><a href="/access" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition">アクセス</a></li>
+            </ul>
+
+            <div className="flex items-center gap-4">
+              {/* アイコンの書き方を一番安全なものに変えました */}
+              <a 
+                href={instagramUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-stone-600 dark:text-stone-300 hover:text-[#E1306C] dark:hover:text-pink-400 transition-colors flex items-center justify-center"
+              >
+                <Instagram size="22px" />
+              </a>
+
+              <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-md text-sm font-medium">
+                ご予約はこちら
+              </a>
+            </div>
+          </div>
         </nav>
 
-        {/* メインコンテンツ */}
         <main className="flex-grow">
           {children}
         </main>
 
-        {/* フッター */}
-        <footer className="bg-stone-800 text-stone-200 py-16 px-6">
+        <footer className="bg-stone-800 dark:bg-black text-stone-200 py-16 px-6 border-t border-stone-700">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">りあん鍼灸院</h2>
@@ -58,8 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p className="text-sm text-stone-400">
                 〒710-0063<br />
                 岡山県倉敷市日ノ出町1丁目5-15<br />
-                TEL: 090-7122-7638<br /><br />
-                <span className="text-xs text-stone-500">※施術中はお電話に出られない場合がございます。</span>
+                TEL: 090-7122-7638
               </p>
             </div>
           </div>
@@ -68,7 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
 
-        {/* スマホ用下部固定ナビゲーション（コンポーネントを配置） */}
         <MobileNavbar />
       </body>
     </html>
