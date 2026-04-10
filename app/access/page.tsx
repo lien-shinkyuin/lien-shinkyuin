@@ -37,16 +37,16 @@ export default function AccessPage() {
 
         {/* 右側：Googleマップ */}
         <div className="w-full aspect-square bg-stone-100 dark:bg-stone-800 rounded-2xl overflow-hidden shadow-inner border border-stone-200 dark:border-stone-700">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4246995079685!2d133.768652!3d34.618683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551571584ec665d%3A0xe526e068e1694f83!2z44KK44GC44KT6Y285LmF6Zmi!5e0!3m2!1sja!2sjp!4v1712730000000!5m2!1sja!2sjp"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="りあん鍼灸院の地図"
-          ></iframe>
+         <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.454269165682!2d133.76709477647244!3d34.60545547295416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35515771d6ba44c7%3A0x4c099b9b8d38f30b!2z44OC44GC44KT6Y2854G46Zmi!5e0!3m2!1sja!2sjp!4v1712731200000!5m2!1sja!2sjp"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen={true}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="りあん鍼灸院の地図"
+></iframe>
         </div>
       </div>
     </main>
