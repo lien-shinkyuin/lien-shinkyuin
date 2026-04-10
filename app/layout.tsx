@@ -1,23 +1,22 @@
 import './globals.css'
 import React from 'react'
+import MobileNavbar from '../components/MobileNavbar';
 
 export const metadata = {
   title: '倉敷の鍼灸なら「りあん鍼灸院」| 女性に優しい完全個室のプライベートサロン',
   description: '岡山県倉敷市日ノ出町の鍼灸院です。肩こり・腰痛・自律神経の乱れなど、一人ひとりに合わせたオーダーメイドの施術を提供。LINEで24時間予約受付中。',
-  // google-site-verification の設定を確実に認識させる書き方です
   verification: {
-    google: 'uYYHjlgI6RPasoLO51Wg9fV-KKByJDwxd3arxv_2_aY', //<meta name="google-site-verification" content="ysi9xXGz8PkLOoOqBim83nRukChNe1IyWnYcstk_L4E" />
+    google: 'uYYHjlgI6RPasoLO51Wg9fV-KKByJDwxd3arxv_2_aY',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // 先ほどのtolの予約リンクをここにまとめました
   const reservationUrl = "https://lin.ee/oNgp7Y2R";
 
   return (
     <html lang="ja">
-      <body className="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
-        {/* ナビゲーション */}
+      <body className="bg-stone-50 text-stone-800 flex flex-col min-h-screen pb-20 md:pb-0">
+        {/* ナビゲーション（PC用） */}
         <nav className="flex items-center justify-between px-6 py-4 bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
           <a href="/" className="text-xl md:text-2xl font-bold text-emerald-800 tracking-tight">りあん鍼灸院</a>
           <ul className="hidden md:flex gap-8 font-medium text-stone-600">
@@ -31,11 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </nav>
 
         {/* メインコンテンツ */}
-        <div className="flex-grow">
+        <main className="flex-grow">
           {children}
-        </div>
+        </main>
 
-        {/* プロ仕様の黒系フッター */}
+        {/* フッター */}
         <footer className="bg-stone-800 text-stone-200 py-16 px-6">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
             <div>
@@ -69,13 +68,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
 
-        {/* スマホ固定バー（予約システムに直結） */}
-        <div className="md:hidden sticky bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-stone-100 z-50">
-          {/* スマホ固定バーのテキスト修正例 */}
-          <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="...">
-           LINEで予約・相談する
-          </a>
-        </div>
+        {/* スマホ用下部固定ナビゲーション（コンポーネントを配置） */}
+        <MobileNavbar />
       </body>
     </html>
   )
