@@ -56,7 +56,6 @@ export default function MenuPage() {
             transition={{ delay: index * 0.1 }}
             className="group flex flex-col md:flex-row bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-stone-100 dark:border-stone-700 overflow-hidden hover:shadow-md transition duration-300"
           >
-            {/* 左側：写真 */}
             <div className="relative w-full md:w-48 h-40 md:h-auto overflow-hidden">
               <Image 
                 src={item.img} 
@@ -66,18 +65,14 @@ export default function MenuPage() {
               />
             </div>
 
-            {/* 右側：説明と料金 */}
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                {/* コース名を白っぽく */}
                 <h3 className="text-lg md:text-xl font-bold text-stone-800 dark:text-stone-100">{item.name}</h3>
                 <div className="flex items-center gap-3">
-                  {/* 価格を少し明るい緑に */}
                   <span className="text-emerald-700 dark:text-emerald-400 font-bold text-xl">{item.price}</span>
                   <span className="text-stone-400 dark:text-stone-500 text-xs">({item.time})</span>
                 </div>
               </div>
-              {/* 説明文の色を調整 */}
               <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
@@ -92,6 +87,23 @@ export default function MenuPage() {
         <p>※症状によって時間が前後する場合がございます。</p>
         <p>※健康保険の適用については、ご来院時にご相談ください。</p>
       </motion.div>
+
+      {/* 追加した予約ボタンエリア */}
+      <div className="mt-16 mb-10 text-center border-t border-stone-100 dark:border-stone-800 pt-12">
+        <p className="text-stone-600 dark:text-stone-400 mb-6 text-sm md:text-base">
+          ご予約・ご相談はLINEからお気軽にどうぞ。<br className="md:hidden" />
+          24時間受け付けております。
+        </p>
+        <a 
+          href="https://lin.ee/oNgp7Y2R" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-block bg-emerald-700 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-emerald-800 hover:scale-105 transition-all duration-300"
+        >
+          LINEで今すぐ予約する
+        </a>
+      </div>
+
     </main>
   );
 }
