@@ -28,15 +28,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </ul>
 
             <div className="flex items-center gap-4">
+              {/* --- ここから修正：📸 を インスタロゴ（SVG）に変更 --- */}
               <a 
                 href={instagramUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:scale-110 transition-transform text-2xl"
+                className="text-stone-600 dark:text-stone-300 hover:text-[#E1306C] dark:hover:text-pink-400 transition-colors duration-300 flex items-center"
                 aria-label="Instagram"
               >
-                📸
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
               </a>
+              {/* --- ここまで修正 --- */}
+
               <a href={reservationUrl} target="_blank" rel="noopener noreferrer" className="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-md text-sm font-medium">
                 ご予約
               </a>
