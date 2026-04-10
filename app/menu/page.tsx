@@ -10,7 +10,7 @@ export default function MenuPage() {
       time: '約60分', 
       price: '¥5,500', 
       desc: '肩こり・腰痛・疲労感など、お体全体を丁寧に整えます。',
-      img: '/hero1.jpg' // 画像パスを差し替えてください
+      img: '/hero1.jpg' 
     },
     { 
       name: 'スキマ時間ケアコース', 
@@ -42,8 +42,8 @@ export default function MenuPage() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12 md:mb-20"
       >
-        <h1 className="text-2xl md:text-3xl font-bold text-stone-800 mb-3 text-serif">メニュー・料金</h1>
-        <p className="text-sm md:text-base text-stone-500">お一人おひとりに合わせた施術をご提案します。</p>
+        <h1 className="text-2xl md:text-3xl font-bold text-stone-800 dark:text-stone-100 mb-3">メニュー・料金</h1>
+        <p className="text-sm md:text-base text-stone-500 dark:text-stone-400">一人ひとりに合わせた施術をご提案します。</p>
       </motion.div>
 
       <div className="space-y-6">
@@ -54,7 +54,7 @@ export default function MenuPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="group flex flex-col md:flex-row bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-md transition duration-300"
+            className="group flex flex-col md:flex-row bg-white dark:bg-stone-800 rounded-2xl shadow-sm border border-stone-100 dark:border-stone-700 overflow-hidden hover:shadow-md transition duration-300"
           >
             {/* 左側：写真 */}
             <div className="relative w-full md:w-48 h-40 md:h-auto overflow-hidden">
@@ -69,13 +69,16 @@ export default function MenuPage() {
             {/* 右側：説明と料金 */}
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                <h3 className="text-lg md:text-xl font-bold text-stone-800">{item.name}</h3>
+                {/* コース名を白っぽく */}
+                <h3 className="text-lg md:text-xl font-bold text-stone-800 dark:text-stone-100">{item.name}</h3>
                 <div className="flex items-center gap-3">
-                  <span className="text-emerald-700 font-bold text-xl">{item.price}</span>
-                  <span className="text-stone-400 text-xs">({item.time})</span>
+                  {/* 価格を少し明るい緑に */}
+                  <span className="text-emerald-700 dark:text-emerald-400 font-bold text-xl">{item.price}</span>
+                  <span className="text-stone-400 dark:text-stone-500 text-xs">({item.time})</span>
                 </div>
               </div>
-              <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
+              {/* 説明文の色を調整 */}
+              <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -84,7 +87,7 @@ export default function MenuPage() {
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="mt-12 p-6 bg-stone-50 rounded-xl text-stone-600 text-xs md:text-sm border-l-4 border-emerald-600"
+        className="mt-12 p-6 bg-stone-50 dark:bg-stone-800/50 rounded-xl text-stone-600 dark:text-stone-400 text-xs md:text-sm border-l-4 border-emerald-600 dark:border-emerald-500"
       >
         <p>※症状によって時間が前後する場合がございます。</p>
         <p>※健康保険の適用については、ご来院時にご相談ください。</p>
